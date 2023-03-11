@@ -9,7 +9,7 @@ using static System.Console;
 Clear();
 int m = asknum("значение M");
 int n = asknum("значение N");
-WriteLine($"M = {m}; N = {n} -> {SumElements(n, m)}");
+WriteLine($"M = {m}; N = {n} -> {SumElements(m, n)}");
 
 int asknum(string name)
 {
@@ -20,7 +20,6 @@ int asknum(string name)
 
 int SumElements(int m, int n)
 {
-    if (m==n) return m;
-    return  m + SumElements(m-1, n);
-
+    if (m==n) return n;
+    return  n + SumElements(m, n-1);
 } 
